@@ -341,17 +341,19 @@ header .header-wave path {fill: #FFF}
 .box9 .text .short-line {margin: auto}
 
 .box9 .images {overflow: hidden;width: 100vw;height: 50vw;}
+.box9 .images img {opacity: .7;transition: .5s;cursor: pointer}
+.box9 .images img:hover {opacity: 1}
 .box9 .images .l-imgs {float: left;width: 50%;height: 100%}
 .box9 .images .l-imgs img {height: 50%;width: 50%;float: left}
 .box9 .images .r-imgs {float: right;width: 50%;height: 100%}
 .box9 .images .r-imgs img {height: 50%;width: 50%;float: left}
 .box9 .images .r-imgs img:nth-of-type(1) {height: 100%}
 
-.box9 .quote {width: 600px;margin: 65px auto;}
-.box9 .quote img {border-radius: 50%;float: left;margin-right: 20px;width: 120px;height: 120px;}
-.box9 .quote q {float: left;color: #b6b6b6;margin-top: 10px;}
+.box9 .quote {height: 250px;margin-top: 50px;}
+.box9 .quote img {border-radius: 50%;width: 120px;height: 120px;display: block;margin: auto;}
+.box9 .quote q {color: #b6b6b6;display: block;margin-top: 15px;text-align: center}
 .box9 .quote .short-line {display: inline-block;margin-right: 5px;}
-.box9 .quote h4 {display: inline-block}
+.box9 .quote h4 {display: inline-block;margin: 10px 0 0}
 
 /* End box 9 */
 

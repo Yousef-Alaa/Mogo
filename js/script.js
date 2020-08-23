@@ -86,11 +86,6 @@ window.onscroll = function () {
     }
 };
 
-topButton.onclick = function () {
-    'use strict';
-    window.scrollTo(0, 0);
-};
-
 /* Change Theme Color */
 themeBtnDef.onclick = function () {
     'use strict';

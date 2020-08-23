@@ -1,5 +1,7 @@
 /*global $*/
 
+
+// Fit Heading For Responsive Heading
 $(function () {
     
     'use strict';
@@ -22,3 +24,11 @@ $(function () {
     });
 });
 
+
+// Smooth Scroll
+$(function () {
+    'use strict';
+    
+    $('.smooth-scroll').smoothScroll();
+    
+});

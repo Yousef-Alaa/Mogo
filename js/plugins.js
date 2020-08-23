@@ -1,4 +1,4 @@
-/*global $*/
+/*global $, document*/
 
 
 // Fit Heading For Responsive Heading
@@ -31,4 +31,23 @@ $(function () {
     
     $('.smooth-scroll').smoothScroll();
     
+});
+
+// Images Slider
+
+/*
+
+<ul id="autoWidth" class="cs-hidden">
+<li class="item-a">
+
+*/
+$(document).ready(function () {
+    'use strict';
+    $('#autoWidth').lightSlider({
+        autoWidth: true,
+        loop: true,
+        onSliderLoad: function () {
+            $('#autoWidth').removeClass('cS-hidden');
+        }
+    });
 });

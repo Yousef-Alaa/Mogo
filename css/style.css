@@ -331,6 +331,33 @@ header .header-wave path {fill: #FFF}
 
 /* End box 8 */
 
+/* Start Images Slider */
+.slider {
+    position: fixed;top: 0;left: 0;
+    width: 100%;height: 100vh;z-index: 2;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.lSSlideOuter {margin-top: calc(50% - 43vw)}
+.lSAction > a {
+    background-color: var(--main-color);
+    border-radius: 50%;
+    opacity: 1;}
+.lSAction > a:hover {opacity: .7}
+.slider .images {width: 100%;height: 100%;}
+.slider .images img {width: 40vw;height: 35vw;}
+
+#x-btn {all: unset;
+    position: absolute;top: 10px;right: 10px;
+    width: 30px;height: 30px;border-radius: 50%;
+    background-color: var(--main-color);color: #FFF;
+    text-align: center;cursor: pointer
+}
+
+.slider .slider-container .images img {height: 100%;display: block;margin: auto;}
+
+/* End Images Slider */
+
 /* Start box 9 */
 
 .box9 {overflow: hidden;margin-top: 40px;}
@@ -464,7 +491,7 @@ footer .copy p span {color: var(--main-color)}
 .top-button {
     all: unset;
     position: fixed;
-    bottom: -30px;
+    bottom: -50px;
     right: 25px;
     width: 30px;
     height: 30px;
@@ -605,7 +632,11 @@ footer .copy p span {color: var(--main-color)}
         width: 100px;
         height: 100px;}
     .box10 article section div {float: none;display: block}
+    
+    .lSSlideOuter {margin-top: calc(50% - 40vw)}
 }
+
+@media (max-width: 900px) {.lSSlideOuter {margin-top: calc(50% - 34vw)}}
 
 @media (max-width: 768px) (max-width: 1024px) {.box6 .control {width: 45vw}}
 
@@ -617,6 +648,8 @@ footer .copy p span {color: var(--main-color)}
     footer article {flex-wrap: wrap}
     footer .mogo .input input:first-of-type{width: 55%;}
     footer .mogo .input input:last-of-type{width: 45%;}
+    
+    .lSSlideOuter {margin-top: calc(50% - 30vw)}
 }
 
 @media (max-width: 700px) {
@@ -625,6 +658,7 @@ footer .copy p span {color: var(--main-color)}
     footer .mogo .input input:last-of-type {width: 35%}
     
     footer article .blogs {margin-top: 20px}
+    footer article .blogs section {flex-basis: 1}
     
     footer article .instagram div {width: 45vw;height: 45vw;}
     
@@ -695,6 +729,8 @@ footer .copy p span {color: var(--main-color)}
     
     .box3 .control article {flex-basis: 50%;}
     .box3 .control article section {margin-left: 5%}
+    
+    .lSSlideOuter {margin-top: calc(50% - 25vw)}
 }
 
 @media (min-width:681) (max-width: 768px) {
@@ -717,11 +753,15 @@ footer .copy p span {color: var(--main-color)}
     .box11 article section img {margin: auto}
     .box11 article section h5
     .box11 article section p {text-align: center}
+    
+    .lSSlideOuter {margin-top: calc(50% - 23vw)}
 }
 
 @media (max-width: 550px) {
     .box5 > div {width: 100%;}
     .box5 svg {width: 75vw;height: 75vw;margin-left: 25px;}
+    
+    .lSSlideOuter {margin-top: calc(50% - 20.5vw)}
 }
 
 @media (max-width: 511px) {
@@ -731,6 +771,8 @@ footer .copy p span {color: var(--main-color)}
     .box10 article section div p,
     .box10 article section div h6 {text-align: center;}
     .box10 article section div .short-line {margin: auto}
+    
+    .lSSlideOuter {margin-top: }
 }
 
 @media (max-width: 425px) {
@@ -745,11 +787,17 @@ footer .copy p span {color: var(--main-color)}
     .box2 .container > div:last-of-type {width: 30%;height: 47%;border: none}
     
     .box7 .control {flex-direction: column}
-    .box7 .control figure img {display: block;margin: auto}
+    .box7 .control figure img {display: block;margin: auto;width: 60vw;height: 65vw;}
     
     .box9 .quote {width: 100%;margin: 65px 0 0}
     .box9 .quote q {float: none}
     .box9 .quote img {float: none;display: block;margin: 0 auto 30px;}
+    
+    .lSSlideOuter {margin-top: calc(50% - 4vw)}
 }
 
-@media (max-width: 370px) {.box3 .control article {flex-basis: 90%;}} 
+@media (max-width: 370px) {
+    .box3 .control article {flex-basis: 90%;}
+    
+    .lSSlideOuter {margin-top: 50%}
+} 

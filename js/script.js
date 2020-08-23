@@ -1,6 +1,8 @@
 /*global document, window, setTimeout*/
 
-var snake = document.getElementById("snake"),
+var i,
+
+    snake = document.getElementById("snake"),
     
     menuHidden = document.getElementById('menu-hid'),
     
@@ -24,6 +26,10 @@ var snake = document.getElementById("snake"),
     
     themeBtnYellow = document.getElementById('theme-yellow'),
     
+    sliderShow = document.getElementsByClassName('gallery-img'),
+    
+    sliderHid = document.getElementById('x-btn'),
+    
     topButton = document.getElementById("top-button");
 
 /* Loading Function */
@@ -34,7 +40,7 @@ function load() {
     snake.style.display = "none";
 }
 
-window.onload = setTimeout(load, 3000);
+window.onload = setTimeout(load, 4000);
 
 /* Responsive Menu Function */
 menuShow.onclick = function () {
@@ -82,7 +88,7 @@ window.onscroll = function () {
     if (window.pageYOffset >= 600) {
         topButton.style.bottom = "25px";
     } else {
-        topButton.style.bottom = "-25px";
+        topButton.style.bottom = "-50px";
     }
 };
 
@@ -112,4 +118,31 @@ themeBtnYellow.onclick = function () {
     
     themeConatainer.classList.remove('theme-blue', 'theme-pink');
     themeConatainer.classList.add('theme-yellow');
+};
+
+// Slider Show
+var sliderShowFun = function () {
+        'use strict';
+        document.getElementsByClassName('slider')[0].style.display = 'block';
+    };
+
+for (i = 0; i < sliderShow.length; i = i + 1) {
+    sliderShow[i].onclick = sliderShowFun;
+}
+
+//  Slider Hidden On Load (To Fix Slider Errors)
+
+var autoHidSlider = function () {
+    'use strict';
+    document.getElementsByClassName('slider')[0].style.display = 'none';
+};
+
+setTimeout(autoHidSlider, 3000);
+
+
+// Slider Hidden By Button
+
+sliderHid.onclick = function () {
+    'use strict';
+    document.getElementsByClassName('slider')[0].style.display = 'none';
 };

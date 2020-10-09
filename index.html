@@ -8,7 +8,7 @@
         <meta name="keywords"           content="tasks, create template, psd to html"/>
         <meta name="description"        content="In This Website You Can Find A Train To Create Website From PSD Template"/>
         <meta name="application-name"   content="Convert PSD File To HTML"/>
-        <meta name="revised"            content="Saturday, August 1st, 2020, 06:00 pm"/>
+        <meta name="revised"            content="Saturday, Oct 9th, 2020, 11:00 pm"/>
         <!--Social Media Meta Tag (Start)-->
         <meta name="og:title"           content="PSD To HTML" />
         <meta name="og:description"     content="Create A Website From PSD"/>
@@ -19,7 +19,10 @@
         <link rel="icon"        href="img/logo.png"/>
         <!--Normalize Library-->
         <link rel="stylesheet"  href="css/normalize.css"/>
-        <link rel="stylesheet"  href="css/lightslider.css"/>
+        <link rel="stylesheet"  href="css/slick.css"/>
+        <link rel="stylesheet"  href="css/animate.css"/>
+        <link rel="stylesheet"  href="css/accordion.css"/>
+        <link rel="stylesheet"  href="css/all.min.css"/>
         <!--Stylesheet-->
         <link rel="stylesheet"  href="css/style.css"/>
         
@@ -60,10 +63,10 @@
 
                <h4>Theme Color</h4>
                <div class="theme-color">
-                   <span id="theme-defualt"></span>
-                   <span id="theme-blue"></span>
-                   <span id="theme-pink"></span>
-                   <span id="theme-yellow"></span>
+                   <span data-color="theme-defualt" class="theme-buttons"></span>
+                   <span data-color="theme-blue" class="theme-buttons"></span>
+                   <span data-color="theme-pink" class="theme-buttons"></span>
+                   <span data-color="theme-yellow" class="theme-buttons"></span>
                </div>
             </div>
             <!--Start Header-->
@@ -119,15 +122,17 @@
             <!--Start Box1-->
 
             <div id="about" class="box1 container">
-                <h4 class="curve-font">what we do</h4>
-                <h3>story about us</h3>
-                <span class="short-line"></span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                <br>veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                <div class="wow animate__backInUp" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="300">
+                    <h4 class="curve-font">what we do</h4>
+                    <h3>story about us</h3>
+                    <span class="short-line"></span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    <br>veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </div>
                 <div class="images">
-                    <img src="img/Layer%202.png" alt="Photo 1"/>
-                    <img src="img/Layer%203.png" alt="Photo 2"/>
-                    <img src="img/Layer%204.png" alt="Photo 3"/>
+                    <img src="img/Layer%202.png" class="wow animate__backInRight" alt="Photo 1" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="200"/>
+                    <img src="img/Layer%203.png" class="wow animate__backInDown" alt="Photo 2" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="200"/>
+                    <img src="img/Layer%204.png" class="wow animate__backInLeft" alt="Photo 3" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="200"/>
                 </div>
             </div>
 
@@ -151,7 +156,7 @@
                 <span class="short-line"></span>
                 <div class="control">
 
-                    <article>
+                    <article class="wow animate__bounceInLeft" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="200">
                         <i class="fas fa-bell"></i>
                         <section>
                             <h5>photography</h5>
@@ -161,7 +166,7 @@
                         </section>
                     </article>
 
-                    <article>
+                    <article class="wow animate__bounceInLeft" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="200">
                         <i class="fas fa-drafting-compass"></i>
                         <section>
                             <h5>web design</h5>
@@ -171,7 +176,7 @@
                         </section>
                     </article>
 
-                    <article>
+                    <article class="wow animate__bounceInLeft" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="200">
                         <i class="fas fa-desktop"></i>
                         <section>
                             <h5>creativity</h5>
@@ -181,7 +186,7 @@
                         </section>
                     </article>
 
-                    <article>
+                    <article class="wow animate__bounceInRight" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="200">
                         <i class="fas fa-seedling"></i>
                         <section>
                             <h5>seo</h5>
@@ -191,7 +196,7 @@
                         </section>
                     </article>
 
-                    <article>
+                    <article class="wow animate__bounceInRight" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="200">
                         <i class="fas fa-pen"></i>
                         <section>
                             <h5>css/html</h5>
@@ -201,7 +206,7 @@
                         </section>
                     </article>
 
-                    <article>
+                    <article class="wow animate__bounceInRight" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="200">
                         <i class="fas fa-laptop-code"></i>
                         <section>
                             <h5>digital</h5>
@@ -231,44 +236,58 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                     <br>veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                 </p>
-                <div>
+                <div class="wow animate__backInLeft" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="200">
                     <svg class="anim-flow" id="e9cedb39-6f65-4384-b75a-4a0d633b244e" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="769.61192" height="699.92655" viewBox="0 0 769.61192 699.92655"><polygon points="757.569 699.927 0 699.927 0 697.745 757.964 697.745 757.569 699.927" fill="#3f3d56"/><path d="M777.806,396.01231H507.80547a5.00588,5.00588,0,0,1-5-5V268.03673a5.00588,5.00588,0,0,1,5-5H777.806a5.00589,5.00589,0,0,1,5,5V391.01231A5.00589,5.00589,0,0,1,777.806,396.01231ZM507.80547,265.03673a3.00328,3.00328,0,0,0-3,3V391.01231a3.00328,3.00328,0,0,0,3,3H777.806a3.00328,3.00328,0,0,0,3-3V268.03673a3.00328,3.00328,0,0,0-3-3Z" transform="translate(-215.19404 -100.03673)" fill="#3f3d56"/><circle cx="327.61143" cy="201.48753" r="21" class="hipath"/><path d="M591.30547,287.52426a3.5,3.5,0,0,0,0,7h165a3.5,3.5,0,0,0,0-7Z" transform="translate(-215.19404 -100.03673)" fill="#e6e6e6"/><path d="M591.30547,308.52426a3.5,3.5,0,0,0,0,7h71a3.5,3.5,0,0,0,0-7Z" transform="translate(-215.19404 -100.03673)" fill="#e6e6e6"/><path d="M526.69791,342.09717c-2.66237,0-4.82892,1.57031-4.82892,3.5s2.16655,3.5,4.82892,3.5H754.34715c2.66238,0,4.82893-1.57031,4.82893-3.5s-2.16655-3.5-4.82893-3.5Z" transform="translate(-215.19404 -100.03673)" fill="#e6e6e6"/><path d="M526.69791,363.09717c-2.66237,0-4.82892,1.57031-4.82892,3.5s2.16655,3.5,4.82892,3.5H754.34715c2.66238,0,4.82893-1.57031,4.82893-3.5s-2.16655-3.5-4.82893-3.5Z" transform="translate(-215.19404 -100.03673)" fill="#e6e6e6"/><path d="M979.806,233.01231H709.80547a5.00588,5.00588,0,0,1-5-5V105.03673a5.00588,5.00588,0,0,1,5-5H979.806a5.00589,5.00589,0,0,1,5,5V228.01231A5.00589,5.00589,0,0,1,979.806,233.01231ZM709.80547,102.03673a3.00328,3.00328,0,0,0-3,3V228.01231a3.00328,3.00328,0,0,0,3,3H979.806a3.00328,3.00328,0,0,0,3-3V105.03673a3.00328,3.00328,0,0,0-3-3Z" transform="translate(-215.19404 -100.03673)" fill="#3f3d56"/><circle cx="529.61143" cy="38.48753" r="21" class="hipath"/><path d="M793.30547,124.52426a3.5,3.5,0,0,0,0,7h165a3.5,3.5,0,0,0,0-7Z" transform="translate(-215.19404 -100.03673)" fill="#e6e6e6"/><path d="M793.30547,145.52426a3.5,3.5,0,0,0,0,7h71a3.5,3.5,0,0,0,0-7Z" transform="translate(-215.19404 -100.03673)" fill="#e6e6e6"/><path d="M728.69791,179.09717c-2.66237,0-4.82892,1.57031-4.82892,3.5s2.16655,3.5,4.82892,3.5H956.34715c2.66238,0,4.82893-1.57031,4.82893-3.5s-2.16655-3.5-4.82893-3.5Z" transform="translate(-215.19404 -100.03673)" fill="#e6e6e6"/><path d="M728.69791,200.09717c-2.66237,0-4.82892,1.57031-4.82892,3.5s2.16655,3.5,4.82892,3.5H956.34715c2.66238,0,4.82893-1.57031,4.82893-3.5s-2.16655-3.5-4.82893-3.5Z" transform="translate(-215.19404 -100.03673)" fill="#e6e6e6"/><path d="M979.806,559.01231H709.80547a5.00588,5.00588,0,0,1-5-5V431.03673a5.00588,5.00588,0,0,1,5-5H979.806a5.00589,5.00589,0,0,1,5,5V554.01231A5.00589,5.00589,0,0,1,979.806,559.01231ZM709.80547,428.03673a3.00328,3.00328,0,0,0-3,3V554.01231a3.00328,3.00328,0,0,0,3,3H979.806a3.00328,3.00328,0,0,0,3-3V431.03673a3.00328,3.00328,0,0,0-3-3Z" transform="translate(-215.19404 -100.03673)" fill="#3f3d56"/><circle cx="529.61143" cy="364.48753" r="21" class="hipath"/><path d="M793.30547,450.52426a3.5,3.5,0,0,0,0,7h165a3.5,3.5,0,0,0,0-7Z" transform="translate(-215.19404 -100.03673)" fill="#e6e6e6"/><path d="M793.30547,471.52426a3.5,3.5,0,0,0,0,7h71a3.5,3.5,0,0,0,0-7Z" transform="translate(-215.19404 -100.03673)" fill="#e6e6e6"/><path d="M728.69791,505.09717c-2.66237,0-4.82892,1.57031-4.82892,3.5s2.16655,3.5,4.82892,3.5H956.34715c2.66238,0,4.82893-1.57031,4.82893-3.5s-2.16655-3.5-4.82893-3.5Z" transform="translate(-215.19404 -100.03673)" fill="#e6e6e6"/><path d="M728.69791,526.09717c-2.66237,0-4.82892,1.57031-4.82892,3.5s2.16655,3.5,4.82892,3.5H956.34715c2.66238,0,4.82893-1.57031,4.82893-3.5s-2.16655-3.5-4.82893-3.5Z" transform="translate(-215.19404 -100.03673)" fill="#e6e6e6"/><path d="M331.46871,502.39851l-9.233,13.90718a11.90547,11.90547,0,0,0,4.72248,16.29012h0a11.90548,11.90548,0,0,0,17.5161-9.342l-1.51509-12.89132,7.11083-83.58177,12.12939-54.97613-25.1834-7.14947-11.72211,61.82257Z" transform="translate(-215.19404 -100.03673)" fill="#9f616a"/><path d="M461.69382,766.161,437.2887,767.2221l-54.78719-187.721L322.61689,768.6723l-23.27016-.38911,37.60773-221.79178c-11.06488-30.31918-3.88368-58.01451,13.26389-84.27659l2.57859-16.38424,66.4532-1.18049,6.24482,62.153Z" transform="translate(-215.19404 -100.03673)" fill="#2f2e41"/><path d="M444.73147,799.54408c3.43773,1.569,6.74208-11.51838,9.21708-8.29293,9.573,12.47553,28.2134,8.16962,27.569,6.18413a5.07028,5.07028,0,0,0,3.19583-6.60734h0a5.0703,5.0703,0,0,0-3.51774-3.13861l-8.62612-2.15653L459.02527,761.7136l-14.76084-1.86817-.37282.60971a38.059,38.059,0,0,0-4.0785,31.12072C441.04066,795.50911,442.71156,798.62221,444.73147,799.54408Z" transform="translate(-215.19404 -100.03673)" fill="#2f2e41"/><path d="M304.10119,799.54408c3.43773,1.569,6.74207-11.51838,9.21708-8.29293,9.573,12.47553,28.2134,8.16962,27.569,6.18413a5.07028,5.07028,0,0,0,3.19583-6.60734h0a5.07029,5.07029,0,0,0-3.51773-3.13861l-8.62613-2.15653L318.395,761.7136l-14.76084-1.86817-.37283.60971a38.05907,38.05907,0,0,0-4.0785,31.12072C300.41037,795.50911,302.08128,798.62221,304.10119,799.54408Z" transform="translate(-215.19404 -100.03673)" fill="#2f2e41"/><path d="M319.5,412.84919l19.19988-65.54036a17.97906,17.97906,0,0,1,21.09765-14.19092h0a17.97906,17.97906,0,0,1,14.19092,21.09766l-15.69728,59.85364C346.91816,402.09344,333.84973,402.71226,319.5,412.84919Z" transform="translate(-215.19404 -100.03673)" class="hipath"/><path d="M489.21633,351.82267l-36.36191,8.021,1.5634-28.92287h29.70457l19.1417-58.01277-.25119-15.01287A9.7636,9.7636,0,0,1,511.567,245.485h0a9.7636,9.7636,0,0,1,9.94664,13.23286l-6.54217,17.7925L506.01,330.92081v0A21.40433,21.40433,0,0,1,489.21633,351.82267Z" transform="translate(-215.19404 -100.03673)" fill="#9f616a"/><circle cx="174.73361" cy="179.68279" r="31.26796" fill="#9f616a"/><path d="M395.79039,345.77309l-46.12024.7817c7.36535-23.09586,12.42445-44.69022,11.72548-62.53592h35.17646A306.82039,306.82039,0,0,0,395.79039,345.77309Z" transform="translate(-215.19404 -100.03673)" fill="#9f616a"/><path d="M425.88581,450.12992l-75.60666,11.49764c-11.94391-34.66189-12.29556-74.66383-5.92259-104.26765a48.67768,48.67768,0,0,1,13.13056-38.94627h0l36.73985,3.90849h0a23.51105,23.51105,0,0,1,17.66713,17.08469c14.17535,19.65192,24.56025,38.247,13.07514,50.74412Z" transform="translate(-215.19404 -100.03673)" class="hipath"/><path d="M471.6152,366.09727l-68.00784-6.25359a17.97906,17.97906,0,0,1-17.97906-17.97906v0a17.97906,17.97906,0,0,1,17.97906-17.97906l61.75425,3.90849C455.79333,341.25559,458.91078,353.96183,471.6152,366.09727Z" transform="translate(-215.19404 -100.03673)" class="hipath"/><path d="M347.32476,338.28841l-23.09918-.59354c3.68709-32.29224,5.60728-68.683,24.44676-87.38923,2.3972-2.38025,4.549-4.84521,6.69665-7.31439,4.27671-4.91691,13.34-7.73949,22.60615-6.66806l4.54044.525c14.9056,1.72351,46.1707,12.41042,45.26513,21.746-.46112,4.75367-.7723,13.306-12.08568,13.41362-9.137,12.25945-25.47543,19.06639-18.65353,30.71223,13.64877,12.17515-4.111,21.82749-18.433,29.10063C369.82787,336.27972,358.68951,338.58043,347.32476,338.28841Z" transform="translate(-215.19404 -100.03673)" fill="#2f2e41"/></svg>
                 </div>
-                <div>
-                    <details>
-                        <summary><i class="far fa-image"></i>&nbsp;photography</summary>
-                        <p class="panel-p">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            <br>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                            <br>nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            <br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                            <br>fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-                            <br>culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </details>
+                <div class="wow animate__backInRight" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="200">
+                    <ul id="my-accordion" class="accordionjs">
 
-                    <details>
-                        <summary><i class="fas fa-sliders-h"></i>&nbsp;creativity</summary>
-                        <p class="panel-p">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            <br>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                            <br>nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            <br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                            <br>fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-                            <br>culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </details>
-                    <details>
-                        <summary><i class="fas fa-pen"></i>&nbsp;web design</summary>
-                        <p class="panel-p">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            <br>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                            <br>nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            <br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                            <br>fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-                            <br>culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </details>
+                        <!-- Section 1 -->
+                        <li>
+                            <div class="summary"><i class="far fa-image"></i>&nbsp;photography</div>
+                            <div>
+                                <p class="panel-p">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    <br>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                                    <br>nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                    <br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                                    <br>fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+                                    <br>culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- Section 2 -->
+                        <li>
+                            <div class="summary"><i class="fas fa-sliders-h"></i>&nbsp;creativity</div>
+                            <div>
+                                <p class="panel-p">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    <br>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                                    <br>nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                    <br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                                    <br>fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+                                    <br>culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- Section 3 -->
+                        <li>
+                            <div class="summary"><i class="fas fa-pen"></i>&nbsp;web design</div>
+                            <div>
+                                <p class="panel-p">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    <br>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                                    <br>nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                    <br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                                    <br>fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+                                    <br>culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                            </div>
+                        </li>
+
+                    </ul>
                 </div>
             </div>
 
@@ -299,21 +318,21 @@
                     <br>veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                 </p>
                 <div class="control">
-                    <figure>
+                    <figure class="wow animate__flipInX" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="300">
                         <img src="img/Steve-Jobs.jpg" alt="steve"/>
                         <figcaption>
                             <h3>Steve Jobs</h3>
                             <p>Apple Manager</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure class="wow animate__flipInX" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="300">
                         <img src="img/belgets.jpg" alt=belgets/>
                         <figcaption>
                             <h3>Bel Gets</h3>
                             <p>Microsoft Manager</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure class="wow animate__flipInX" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="300">
                         <img src="img/Mark_Zuckerberg.jpg" alt=Mark/>
                         <figcaption>
                             <h3>Mark Zuckerberg</h3>
@@ -333,45 +352,25 @@
             
             <!-- Images Slider -->
             
-            <div class="slider">
-                   <button id="x-btn"><i class="fas fa-times"></i></button>
-                    <ul id="autoWidth" class="cs-hidden">
-                        <li class="item-a">
-                            <div class="images">
-                                <img src="img/Layer%205.png" alt="Gallery Photo 1"/>
-                            </div>
-                        </li>
-                        <li class="item-a">
-                            <div class="images">
-                                <img src="img/Layer%206.png" alt="Gallery Photo 2"/>
-                            </div>
-                        </li>
-                        <li class="item-b">
-                            <div class="images">
-                                <img src="img/Layer%207.png" alt="Gallery Photo 3"/>
-                            </div>
-                        </li>
-                        <li class="item-b">
-                            <div class="images">
-                                <img src="img/Layer%208.png" alt="Gallery Photo 4"/>
-                            </div>
-                        </li>
-                        <li class="item-c">
-                            <div class="images">
-                                <img src="img/Layer%209.png" alt="Gallery Photo 5"/>
-                            </div>
-                        </li>
-                        <li class="item-c">
-                            <div class="images">
-                                <img src="img/Layer%2010.png" alt="Gallery Photo 6"/>
-                            </div>
-                        </li>
-                        <li class="item-d">
-                            <div class="images">
-                                <img src="img/Layer%2011.png" alt="Gallery Photo 7"/>
-                            </div>
-                        </li>
-                    </ul>
+            <div class="slider-container">
+                <button id="x-btn"><i class="fas fa-times"></i></button>
+                <div class="slider">
+                    
+                        <img src="img/Layer%205.png" alt="Gallery Photo 1"/>
+                        
+                        <img src="img/Layer%206.png" alt="Gallery Photo 2"/>
+
+                        <img src="img/Layer%207.png" alt="Gallery Photo 3"/>
+
+                        <img src="img/Layer%208.png" alt="Gallery Photo 4"/>
+
+                        <img src="img/Layer%209.png" alt="Gallery Photo 5"/>
+
+                        <img src="img/Layer%2010.png" alt="Gallery Photo 6"/>
+
+                        <img src="img/Layer%2011.png" alt="Gallery Photo 7"/>
+
+                </div>
             </div>
             
             <!--Start Box9-->
@@ -386,6 +385,7 @@
                         <br>veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                     </p>
                 </div>
+                
                 <div class="images">
                     <div class="l-imgs">
                         <img class="gallery-img" src="img/Layer%205.png" alt="Gallery Photo 1"/>
@@ -399,6 +399,7 @@
                         <img class="gallery-img" src="img/Layer%2011.png" alt="Gallery Photo 7"/>
                     </div>
                 </div>
+                
                 <div class="quote">
                     <img src="img/Layer%2012.png" alt="girl"/>
                     <q>
@@ -407,7 +408,6 @@
                         <br>veniam, quis nostrud exercitation.
                         <br><span class="short-line"></span><h4 class="curve-font">joshua earle</h4>
                     </q>
-                    
                 </div>
             </div>
 
@@ -419,7 +419,7 @@
                     <h3>what people say</h3>
                     <span class="short-line"></span>
                     <article>
-                        <section>
+                        <section class="wow animate__lightSpeedInLeft" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="200">
                             <img src="img/Layer%2013.png" alt="Person 1"/>
                             <div>
                                 <h5>Matthew Dix</h5>
@@ -433,7 +433,7 @@
 
                             </div>
                         </section>
-                        <section>
+                        <section class="wow animate__lightSpeedInRight" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="200">
                             <img src="img/Layer%2014.png" alt="Person 2"/>
                             <div>
                                 <h5>Nick Karvounis</h5>
@@ -447,7 +447,7 @@
 
                             </div>
                         </section>
-                        <section>
+                        <section class="wow animate__lightSpeedInLeft" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="200">
                             <img src="img/Layer%2015.png" alt="Person 3"/>
                             <div>
                                 <h5>Jaelynn Castillo</h5>
@@ -461,7 +461,7 @@
 
                             </div>
                         </section>
-                        <section>
+                        <section class="wow animate__lightSpeedInRight" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="200">
                             <img src="img/Layer%2016.png" alt="Person 4"/>
                             <div>
                                 <h5>Mike Petrucci</h5>
@@ -486,21 +486,21 @@
                 <h3>last blog</h3>
                 <span class="short-line"></span>
                 <article>
-                    <section>
+                    <section class="wow animate__rotateInUpLeft" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="200">
                         <img src="img/Layer%2017.png" alt="Photo 1"/>
                         <h5>Lorem ipsum dolor sit amet</h5>
                         <p>Consectetur adipiscing elit, sed do eiusmod tempor<br> incididunt ut labore</p>
                         <hr>
                         <p><i class="far fa-eye"></i> 542 &nbsp;<i class="fas fa-comment-dots"></i> 17</p>
                     </section>
-                    <section>
+                    <section class="wow animate__rotateIn" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="200">
                         <img src="img/Layer%2018.png" alt="Photo 2"/>
                         <h5>sed do eiusmod tempor</h5>
                         <p>Adipiscing elit, sed do eiusmod tempor incididunt ut <br>labore et dolore magna aliqua.</p>
                         <hr>
                         <p><i class="far fa-eye"></i> 992 &nbsp;<i class="fas fa-comment-dots"></i> 42</p>
                     </section>
-                    <section>
+                    <section class="wow animate__rotateInUpRight" data-wow-duration='1s' data-wow-delay='0s' data-wow-offset="200">
                         <img src="img/Layer%2019.png" alt="Photo 3"/>
                         <h5>incididunt ut labore</h5>
                         <p>Elit, sed do eiusmod tempor incididunt ut labore et <br>dolore magna aliqua.</p>
@@ -609,12 +609,14 @@
             </a>
         </div>
 
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <!-- JS Files -->
+        <script src="js/wow.min.js"></script>
         <script src="js/script.js"></script>
         <script src="js/jquery-3.5.1.min.js"></script>
         <script src="js/jquery.smooth-scroll.min.js"></script>
         <script src="js/jquery.fittext.js"></script>
-        <script src="js/lightslider.js"></script>
+        <script src="js/jquery-slick.min.js"></script>
+        <script src="js/accordion.min.js"></script>
         <script src="js/plugins.js"></script>
     </body>
 </html>

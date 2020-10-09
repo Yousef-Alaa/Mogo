@@ -34,20 +34,33 @@ $(function () {
 });
 
 // Images Slider
-
-/*
-
-<ul id="autoWidth" class="cs-hidden">
-<li class="item-a">
-
-*/
 $(document).ready(function () {
     'use strict';
-    $('#autoWidth').lightSlider({
-        autoWidth: true,
-        loop: true,
-        onSliderLoad: function () {
-            $('#autoWidth').removeClass('cS-hidden');
-        }
+    $('.slider').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
+    
+    $("#my-accordion").accordionjs();
 });

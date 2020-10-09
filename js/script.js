@@ -1,7 +1,7 @@
-/*global document, window, setTimeout*/
+/*global document, window, setTimeout, localStorage*/
 
-var i,
-
+var i, x,
+    
     snake = document.getElementById("snake"),
     
     menuHidden = document.getElementById('menu-hid'),
@@ -18,13 +18,7 @@ var i,
     
     themeConatainer = document.getElementById('ptc'),
     
-    themeBtnDef = document.getElementById('theme-defualt'),
-    
-    themeBtnBlue = document.getElementById('theme-blue'),
-    
-    themeBtnPink = document.getElementById('theme-pink'),
-    
-    themeBtnYellow = document.getElementById('theme-yellow'),
+    themeButtons = document.getElementsByClassName('theme-buttons'),
     
     sliderShow = document.getElementsByClassName('gallery-img'),
     
@@ -73,15 +67,27 @@ settingBtn2.onclick = function () {
     settingDiv.style.left = "-200px";
 };
 
-/* On/Off Dark Mode */
+// Auto Open Dark Mode With Local Storage
+if (localStorage.getItem("darkMode") === 'dark-mode-on') {
+    document.body.classList.add('dark-mode');
+    darkMode.checked = true;
+}
+
+// Manual Open Dark Mode
 darkMode.onclick = function () {
     
     'use strict';
     
-    document.body.classList.toggle("dark-mode");
+    if (this.checked === true) {
+        document.body.classList.add("dark-mode");
+        localStorage.setItem("darkMode", 'dark-mode-on');
+    } else {
+        document.body.classList.remove("dark-mode");
+        localStorage.setItem("darkMode", 'dark-mode-off');
+    }
 };
 
-/* To Top Button Function */
+// To Top Button Function
 window.onscroll = function () {
     'use strict';
     
@@ -92,57 +98,34 @@ window.onscroll = function () {
     }
 };
 
-/* Change Theme Color */
-themeBtnDef.onclick = function () {
+// Change Theme Color
+themeConatainer.classList.add(localStorage.getItem("pageTheme") || 'theme-defualt');
+
+var themeFun = function () {
     'use strict';
-    
-    themeConatainer.classList.remove('theme-blue', 'theme-pink', 'theme-yellow');
+    themeConatainer.className = "";
+    themeConatainer.classList.add(this.getAttribute('data-color'));
+    localStorage.setItem("pageTheme", this.getAttribute('data-color'));
 };
 
-themeBtnBlue.onclick = function () {
-    'use strict';
-    
-    themeConatainer.classList.remove('theme-pink', 'theme-yellow');
-    themeConatainer.classList.add('theme-blue');
-};
-
-themeBtnPink.onclick = function () {
-    'use strict';
-    
-    themeConatainer.classList.remove('theme-blue', 'theme-yellow');
-    themeConatainer.classList.add('theme-pink');
-};
-
-themeBtnYellow.onclick = function () {
-    'use strict';
-    
-    themeConatainer.classList.remove('theme-blue', 'theme-pink');
-    themeConatainer.classList.add('theme-yellow');
-};
+for (x = 0; x < themeButtons.length; x = x + 1) {
+    themeButtons[x].onclick = themeFun;
+}
 
 // Slider Show
 var sliderShowFun = function () {
         'use strict';
-        document.getElementsByClassName('slider')[0].style.display = 'block';
+        document.getElementsByClassName('slider-container')[0].style.display = 'block';
     };
 
 for (i = 0; i < sliderShow.length; i = i + 1) {
     sliderShow[i].onclick = sliderShowFun;
 }
 
-//  Slider Hidden On Load (To Fix Slider Errors)
-
-var autoHidSlider = function () {
-    'use strict';
-    document.getElementsByClassName('slider')[0].style.display = 'none';
-};
-
-setTimeout(autoHidSlider, 3000);
-
-
 // Slider Hidden By Button
-
 sliderHid.onclick = function () {
     'use strict';
-    document.getElementsByClassName('slider')[0].style.display = 'none';
+    document.getElementsByClassName('slider-container')[0].style.display = 'none';
 };
+
+var WOW = new WOW().init();

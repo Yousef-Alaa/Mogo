@@ -1,20 +1,46 @@
 /*
 Template Name       :   Create A Website From PSD 
 Template Author     :   Yousef Alaa
-Template Version    :   1.2 [Js Update]
+Template Version    :   1.4
 My Email            :   yousefalaa11223344@gmail.com
 Date Created        :   4/6/2020
-Last Update         :   10/8/2020
+Last Update         :   9/10/2020
 */
+
+/*****************************************
+Table Of Contents:
+
+01. Import Google Fonts
+02. Main Rules
+03. Preloader
+04. Setting Bar
+05. Header
+06. Box 1
+07. Box 2
+08. Box 3
+09. Box 4
+10. Box 5
+11. Box 6
+12. Box 7
+13. Box 8
+14. Images Slider
+15. Box 9
+16. Box 10
+17. Box 11
+18. Map
+19. Footer
+20. Back To Top Button
+21. Dark Mode
+22. Media Queries
+******************************************/
 
 /*
 Import Google Fonts
 ====================
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/earlyaccess/droidarabickufi.css');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
 
 /* Start Main Rules */
 * {box-sizing: border-box}
@@ -24,7 +50,7 @@ Import Google Fonts
 body {
     --main-color : #95e1d3;
     --dark-color : #1b262c;
-    font-family: 'Droid Arabic Kufi','Oswald',serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -59,8 +85,8 @@ p {color: #b6b6b6}
 /* End Main Rules */
 
 /*
-Animation Snake Loading
-=======================
+Preloader
+=========
 */
 .snake-con {
     position: fixed;
@@ -211,7 +237,7 @@ header .header-wave path {fill: #FFF}
 .box1 {overflow: hidden}
 .box1 h4,
 .box1 h3{text-align: center;color: #000;margin: 10px}
-.box1 > span {margin: 20px auto}
+.box1 .short-line {margin: 20px auto}
 .box1 p {text-align: center}
 .box1 .images {display: flex;justify-content: space-evenly;margin-top: 50px}
 .box1 .images img {width: 40vh;height: 40vh}
@@ -252,13 +278,13 @@ header .header-wave path {fill: #FFF}
 
 /* Start Box 4 */
 
-.box4 {overflow: hidden;position: relative;min-height: 70vw;}
+.box4 {overflow: hidden;position: relative;min-height: 50vw;}
 .box4 svg:first-of-type {width: 100%}
 .box4 svg:first-of-type path {fill: var(--main-color)}
 .box4 svg:last-of-type {
     float: right;
-    width: 70vw;
-    height: 70vw;
+    width: 50vw;
+    height: 50vw;
     position: absolute;
     top: 15px;
     right: 0px;
@@ -279,9 +305,9 @@ header .header-wave path {fill: #FFF}
 .box5  svg .hipath {fill: var(--main-color)}
 .box5 > div {height: 100%;width: 50%;overflow: hidden;float: left}
 
-.box5 > div details {width: 100%;border-bottom: 1px solid #CCC}
-.box5 > div details:first-of-type {border-top: 1px solid #CCC}
-.box5 > div details summary {color: var(--main-color);font-size: 25px;padding: 15px;}
+.box5 > div li {width: 100%;border-bottom: 1px solid #CCC}
+.box5 > div li:first-of-type {border-top: 1px solid #CCC}
+.box5 > div .summary {color: var(--main-color);font-size: 25px;padding: 15px;}
 
 /* End Box 5 */
 
@@ -332,29 +358,41 @@ header .header-wave path {fill: #FFF}
 /* End box 8 */
 
 /* Start Images Slider */
-.slider {
-    position: fixed;top: 0;left: 0;
-    width: 100%;height: 100vh;z-index: 2;
-    background-color: rgba(0, 0, 0, .7);
+.slider-container {
+    position: fixed;top: 0;left: 0;z-index: 99;display: none;
+    width: 100vw;height: 100vh;background-color: rgba(0, 0, 0, .7);
 }
 
-.lSSlideOuter {margin-top: calc(50% - 43vw)}
-.lSAction > a {
-    background-color: var(--main-color);
-    border-radius: 50%;
-    opacity: 1;}
-.lSAction > a:hover {opacity: .7}
-.slider .images {width: 100%;height: 100%;}
-.slider .images img {width: 40vw;height: 35vw;}
-
-#x-btn {all: unset;
-    position: absolute;top: 10px;right: 10px;
-    width: 30px;height: 30px;border-radius: 50%;
-    background-color: var(--main-color);color: #FFF;
-    text-align: center;cursor: pointer
+#x-btn {
+    position: absolute;top: 17px;right: 45px;z-index: 99;
+    background: var(--main-color);
+    border: 1px solid #FFF;
+    color: #FFF;
+    border-radius: 4px;
+    cursor: pointer
 }
 
-.slider .slider-container .images img {height: 100%;display: block;margin: auto;}
+.slick-slide {max-height: 80vh;min-height: 80vh;margin: 10vh 10px;width: 36vw !important;}
+
+.slick-arrow {
+    all: unset;
+    position: fixed;top: calc(50% - 15px);z-index: 100;
+    width: 30px;height: 30px;border-radius: 50%;overflow: hidden;border: none
+}
+.slick-arrow:first-of-type {left: 25px}
+.slick-arrow:last-of-type {right: 25px}
+
+.slick-arrow:before {
+    position: absolute;top: -2px;left: 0;
+    width: 30px;height: 30px;content: '\f35a';
+    font-family: "Font Awesome 5 Free";
+    background-color: var(--main-color);border-radius: 50%;
+    font-size: 30px;color: #FFF;cursor: pointer
+}
+
+.slick-arrow:first-of-type:before {
+    content: '\f359';
+}
 
 /* End Images Slider */
 
@@ -368,8 +406,9 @@ header .header-wave path {fill: #FFF}
 .box9 .text .short-line {margin: auto}
 
 .box9 .images {overflow: hidden;width: 100vw;height: 50vw;}
-.box9 .images img {opacity: .7;transition: .5s;cursor: pointer}
-.box9 .images img:hover {opacity: 1}
+.box9 .images img {opacity: .7;transition: .5s;cursor: pointer;position: relative;}
+.box9 .images img:hover {opacity: 1;}
+
 .box9 .images .l-imgs {float: left;width: 50%;height: 100%}
 .box9 .images .l-imgs img {height: 50%;width: 50%;float: left}
 .box9 .images .r-imgs {float: right;width: 50%;height: 100%}
@@ -486,8 +525,9 @@ footer .copy p {color: #2c3e50}
 footer .copy p:first-of-type {float: left;}
 footer .copy p:last-of-type {float: right;}
 footer .copy p span {color: var(--main-color)}
+/* End Footer */
 
-
+/* To Top Button */
 .top-button {
     all: unset;
     position: fixed;
@@ -512,7 +552,7 @@ footer .copy p span {color: var(--main-color)}
     transition: .5s
 }
 .top-button i {color: #FFF;text-align: center;font-size: 25px}
-/* End Footer */
+
 
 /*Dark Mode*/
 
@@ -614,6 +654,7 @@ footer .copy p span {color: var(--main-color)}
 
 .dark-mode .setting,
 .dark-mode .setting-btn,
+.dark-mode .box5 > div .summary,
 .dark-mode .box6,
 .dark-mode .box8 {background-color: var(--dark-color);}
 
@@ -632,11 +673,14 @@ footer .copy p span {color: var(--main-color)}
         width: 100px;
         height: 100px;}
     .box10 article section div {float: none;display: block}
-    
-    .lSSlideOuter {margin-top: calc(50% - 40vw)}
 }
 
 @media (max-width: 900px) {.lSSlideOuter {margin-top: calc(50% - 34vw)}}
+
+@media (max-width: 870px) {
+    .box1 .images {flex-direction: column}
+    .box1 .images img {width: 47vw;height: 47vw;margin: 30px auto}
+}
 
 @media (max-width: 768px) (max-width: 1024px) {.box6 .control {width: 45vw}}
 
@@ -648,8 +692,6 @@ footer .copy p span {color: var(--main-color)}
     footer article {flex-wrap: wrap}
     footer .mogo .input input:first-of-type{width: 55%;}
     footer .mogo .input input:last-of-type{width: 45%;}
-    
-    .lSSlideOuter {margin-top: calc(50% - 30vw)}
 }
 
 @media (max-width: 700px) {
@@ -730,7 +772,8 @@ footer .copy p span {color: var(--main-color)}
     .box3 .control article {flex-basis: 50%;}
     .box3 .control article section {margin-left: 5%}
     
-    .lSSlideOuter {margin-top: calc(50% - 25vw)}
+    .box4 {min-height: 70vw;}
+    .box4 svg:last-of-type {width: 70vw;height: 70vw}
 }
 
 @media (min-width:681) (max-width: 768px) {
@@ -753,15 +796,11 @@ footer .copy p span {color: var(--main-color)}
     .box11 article section img {margin: auto}
     .box11 article section h5
     .box11 article section p {text-align: center}
-    
-    .lSSlideOuter {margin-top: calc(50% - 23vw)}
 }
 
 @media (max-width: 550px) {
     .box5 > div {width: 100%;}
     .box5 svg {width: 75vw;height: 75vw;margin-left: 25px;}
-    
-    .lSSlideOuter {margin-top: calc(50% - 20.5vw)}
 }
 
 @media (max-width: 511px) {
@@ -770,13 +809,9 @@ footer .copy p span {color: var(--main-color)}
     .box10 article section div h5 {text-align: center;margin-top: 15px}
     .box10 article section div p,
     .box10 article section div h6 {text-align: center;}
-    .box10 article section div .short-line {margin: auto}
-    
-    .lSSlideOuter {margin-top: }
 }
 
 @media (max-width: 425px) {
-    .box1 .images {flex-direction: column}
     .box1 .images img {width: 60vw;height: 60vw;margin: 30px auto}
     
     .box2 {height: 320px;}
@@ -791,13 +826,9 @@ footer .copy p span {color: var(--main-color)}
     
     .box9 .quote {width: 100%;margin: 65px 0 0}
     .box9 .quote q {float: none}
-    .box9 .quote img {float: none;display: block;margin: 0 auto 30px;}
-    
-    .lSSlideOuter {margin-top: calc(50% - 4vw)}
+    .box9 .quote img {float: none;display: block;margin: 0 auto 30px;}    
 }
 
 @media (max-width: 370px) {
     .box3 .control article {flex-basis: 90%;}
-    
-    .lSSlideOuter {margin-top: 50%}
 } 

@@ -1,41 +1,10 @@
-/*global $, document*/
-
-
-// Fit Heading For Responsive Heading
-$(function () {
-    
-    'use strict';
-    
-    $('.fit-head-1').fitText(1.1, {
-        
-        maxFontSize: "35px"
-        
-    });
-});
-
-$(function () {
-    
-    'use strict';
-    
-    $('.fit-head-2').fitText(1.1, {
-        
-        maxFontSize: "80px"
-        
-    });
-});
-
-
-// Smooth Scroll
-$(function () {
-    'use strict';
-    
-    $('.smooth-scroll').smoothScroll();
-    
-});
-
-// Images Slider
 $(document).ready(function () {
-    'use strict';
+
+    $('.fit-head-1').fitText(1.1, {maxFontSize: "35px"});
+    $('.fit-head-2').fitText(1.1, {maxFontSize: "80px"});
+    $('.smooth-scroll').smoothScroll();
+    $("#my-accordion").accordionjs();
+
     $('.slider').slick({
         centerMode: true,
         centerPadding: '60px',
@@ -62,5 +31,5 @@ $(document).ready(function () {
         ]
     });
     
-    $("#my-accordion").accordionjs();
+    
 });
